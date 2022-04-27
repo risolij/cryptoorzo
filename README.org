@@ -3,7 +3,7 @@ A sample react built cryptocurrency dashboard. A project to learn the react fram
 
 Below is the current state of the dashboard. (Homepage anyway 😁)
 
-[[./imgs/status.png]]
+[[./src/imgs/status.png]]
 
 
 * Getting Started with Create React App
