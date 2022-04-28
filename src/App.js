@@ -14,7 +14,7 @@ let initialState = {
 function reducer(state, action) {
   switch(action.type) {
     case 'initialLoad':
-      return { ...state, cryptos: action.payload, backup: action.payload }
+      return { ...state, cryptos: action.payload.slice(0,20), backup: action.payload }
     case 'initialNews':
       return { ...state, news: action.payload }
     default:
@@ -26,7 +26,7 @@ function App() {
   let [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
-    fetch('https://api.coinstats.app/public/v1/coins')
+    fetch('https://api.coinstats.app/public/v1/coins?limit=2000')
       .then(res => res.json())
       .then(res => dispatch({ type: 'initialLoad', payload: res.coins }) );
 
