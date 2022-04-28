@@ -17,6 +17,8 @@ function reducer(state, action) {
       return { ...state, cryptos: action.payload.slice(0,20), backup: action.payload }
     case 'initialNews':
       return { ...state, news: action.payload }
+    case 'handleThumbCount':
+      return { ...state, news: state.news.map(n => n.id === action.payload.id ? action.payload : n )}
     default:
       return { ...state }
   }
