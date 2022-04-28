@@ -8,6 +8,7 @@
     padding: 0px 50px 50px 50px;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
+    justify-content: space-evenly;
 }
 
 
@@ -17,7 +18,7 @@
     }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 800px) {
     .details_page_news {
         grid-template-columns: 1fr;
     }
