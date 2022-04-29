@@ -1,9 +1,13 @@
 * Cryptoorzo
 A sample react built cryptocurrency dashboard. A project to learn the react framework, create something useful, and develop my skillset. Please feel free to give any suggestions or feedback on the project. Ideas are always welcomed!
 
+** Home Page
 Below is the current state of the dashboard. (Homepage anyway 😁)
 
 [[./src/imgs/status.png]]
+
+** User Preferences
+[[./src/imgs/user_prefs.png]]
 
 
 * Getting Started with Create React App
