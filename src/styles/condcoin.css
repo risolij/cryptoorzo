@@ -1,0 +1,12 @@
+.cond_coin img:hover {
+    background: #d9d9d9;
+}
+
+.cond_coin img {
+    padding: 20px;
+}
+
+.checked img {
+    background: orange;
+    transition: 1s;
+}
