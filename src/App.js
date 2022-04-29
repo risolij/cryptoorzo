@@ -4,21 +4,31 @@ import { useReducer, useEffect } from 'react';
 import AppContext from './context/AppContext';
 import HomePage from './pages/HomePage';
 import DetailsPage from './pages/DetailsPage';
+import PreferencesPage from './pages/PreferencesPage';
 
 let initialState = {
   cryptos: [],
   news: [],
+  preferences: [],
   backup: [],
 }
 
 function reducer(state, action) {
   switch(action.type) {
     case 'initialLoad':
-      return { ...state, cryptos: action.payload.slice(0,20), backup: action.payload }
+    return { ...state, cryptos: action.payload.slice(0,20), preferences: action.payload, backup: action.payload }
     case 'initialNews':
       return { ...state, news: action.payload }
     case 'handleThumbCount':
       return { ...state, news: state.news.map(n => n.id === action.payload.id ? action.payload : n )}
+    case 'handleChecked':
+      return { ...state, preferences: state.preferences.map(c => c.id === action.payload.id ? action.payload : c )}
+    case 'updateHomePage':
+      if (state.preferences.filter(c => c.checked).length === 0) {
+        return {...state, cryptos: state.backup.slice(0,20) }
+      } else {
+        return { ...state, cryptos: state.preferences.filter(c => c.checked)}
+      }
     default:
       return { ...state }
   }
@@ -44,6 +54,7 @@ function App() {
         <Routes>
           <Route path={"/"} element={<HomePage />} />
           <Route path={"/details/:rank"} element={<DetailsPage />} />
+          <Route path={"/preferences"} element={<PreferencesPage />} />
         </Routes>
       </AppContext.Provider>
     </Router>
