@@ -17,12 +17,19 @@ function reducer(state, action) {
   switch(action.type) {
     case 'initialLoad':
     return { ...state, cryptos: action.payload.slice(0,20), preferences: action.payload, backup: action.payload }
+
     case 'initialNews':
       return { ...state, news: action.payload }
+
     case 'handleThumbCount':
       return { ...state, news: state.news.map(n => n.id === action.payload.id ? action.payload : n )}
+
+    case 'filterAssets':
+      return { ...state, preferences: state.backup.filter(crypto => crypto.id.includes(action.payload)) }
+
     case 'handleChecked':
       return { ...state, preferences: state.preferences.map(c => c.id === action.payload.id ? action.payload : c )}
+
     case 'updateHomePage':
       if (state.preferences.filter(c => c.checked).length === 0) {
         return {...state, cryptos: state.backup.slice(0,20) }

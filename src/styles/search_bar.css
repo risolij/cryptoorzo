@@ -1,0 +1,14 @@
+.search_bar {
+    display: flex;
+    padding: 50px 50px 0px 50px;
+}
+
+.search_bar input {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.search_bar button {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}

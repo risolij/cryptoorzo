@@ -4,12 +4,12 @@ import CondCoin from './CondCoin';
 import '../styles/preferences.css'
 
 export default function CondCryptoList() {
-    let [state, dispatch] = useContext(AppContext);
+    let [state] = useContext(AppContext);
 
     return (
         <main className="preferences_grid">
             {
-                state.backup.map((crypto, index) => <CondCoin key={index} crypto={crypto} />)
+                state.preferences.map((crypto, index) => <CondCoin key={index} crypto={crypto} />)
             }
         </main>
 
