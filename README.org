@@ -9,6 +9,8 @@ Below is the current state of the dashboard. (Homepage anyway 😁)
 ** User Preferences
 [[./src/imgs/user_prefs.png]]
 
+** Bitcoin example details page
+[[./src/imgs/example_details.png]]
 
 * Getting Started with Create React App
 
