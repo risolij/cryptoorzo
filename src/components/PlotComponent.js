@@ -57,7 +57,7 @@ export default function PlotComponent(props) {
                         }
                     }
                     useResizeHandler
-                    className="plotly_chart h-full w-full"
+                    className="plotly_chart"
                 />
             </section>
         </>

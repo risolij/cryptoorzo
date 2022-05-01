@@ -1,0 +1,10 @@
+.market_cap_chart {
+    width: 90%;
+    margin: auto;
+}
+
+.market_container {
+    border: 1px solid #d9d9d9;
+    box-shadow: 1px 1px 5px 1px #999;
+    width: 50%;
+}

@@ -1,21 +1,39 @@
 .details_page_plot {
-    display: grid;
+    padding: 50px 50px 0px 50px;
+}
+
+.details_page_barpie {
     padding: 50px;
+    display: flex;
+    width: 100%;
+    gap: 30px;
 }
 
 .details_page_news {
     display: grid;
-    padding: 0px 50px 50px 50px;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
     justify-content: space-evenly;
+    padding: 0px 50px 50px 50px;
 }
+
 
 
 @media only screen and (max-width: 1300px) {
     .details_page_news {
         grid-template-columns: 1fr 1fr;
     }
+}
+
+@media only screen and (max-width: 1000px) {
+    .details_page_barpie {
+        flex-direction: column;
+    }
+
+    .market_container {
+        width: 100%;
+    }
+
 }
 
 @media only screen and (max-width: 800px) {

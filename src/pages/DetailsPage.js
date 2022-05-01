@@ -4,6 +4,8 @@ import { useContext } from 'react';
 import AppContext from '../context/AppContext';
 import PlotComponent from '../components/PlotComponent';
 import RelatedNews from '../components/RelatedNews';
+import BarChart from '../components/BarChart';
+import PieChart from '../components/PieChart';
 import '../styles/details.css'
 
 
@@ -16,9 +18,12 @@ export default function DetailsPage() {
     return (
         <>
             <NavComponent />
-            <h1> price history</h1>
             <section className="details_page_plot">
                 <PlotComponent coin={currentCoin} />
+            </section>
+            <section className="details_page_barpie">
+                <BarChart coin={currentCoin} />
+                <PieChart coin={currentCoin} />
             </section>
             <section className="details_page_news">
                 <RelatedNews coin={currentCoin} />
